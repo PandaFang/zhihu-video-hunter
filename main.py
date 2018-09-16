@@ -41,9 +41,9 @@ def download(save_filename, m3u8_url):
 
 def main():
     while True:
-        url = input('输入回答链接 如：https://www.zhihu.com/question/267782048/answer/331193600\n>')
-        if 'answer' not in url:
-            print('可能不是回答的连接')
+        url = input('输入回答或专栏文章链接 如：https://www.zhihu.com/question/267782048/answer/331193600 或 https://zhuanlan.zhihu.com/p/43831007\n>')
+        if ('zhihu.com/question' not in url or 'answer' not in url) and ('zhuanlan.zhihu.com/p' not in url):
+            print('可能不是回答或文章的链接')
         else:
             break;
 
